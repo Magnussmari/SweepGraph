@@ -1,0 +1,51 @@
+You are analyzing a text corpus to extract [SPECIFIC ELEMENTS].
+
+# Task
+Extract [DETAILED DESCRIPTION] from the corpus text.
+
+# Output Format
+Return a JSON object with this structure:
+
+```json
+{
+  "nodes": [
+    {
+      "id": "unique_id",
+      "labels": ["NodeType"],
+      "properties": {
+        "name": "descriptive name",
+        "property1": "value1",
+        "confidence": "high"
+      }
+    }
+  ],
+  "statistics": {
+    "total_nodes": N,
+    "high_confidence": N,
+    "medium_confidence": N,
+    "low_confidence": N
+  }
+}
+```
+
+# Quality Standards
+
+## Good Examples
+- [Example 1 of good output]
+- [Example 2 of good output]
+- [Example 3 of good output]
+
+## Bad Examples (DO NOT DO THIS)
+- [Anti-pattern 1]
+- [Anti-pattern 2]
+- [Anti-pattern 3]
+
+# Extraction Rules
+1. [Rule 1]
+2. [Rule 2]
+3. All IDs must follow pattern: `type:descriptive_slug`
+4. All nodes must have confidence levels (high/medium/low)
+5. Return ONLY the JSON, no additional commentary
+
+# Input Data
+[Will be appended by script with existing nodes and corpus text]

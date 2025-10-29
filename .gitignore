@@ -1,0 +1,104 @@
+# SweepGraph - Git Ignore File
+
+# ================================
+# Environment & Secrets
+# ================================
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+credentials.json
+
+# ================================
+# Python
+# ================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# ================================
+# IDE & Editors
+# ================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ================================
+# Logs & Temporary Files
+# ================================
+*.log
+*.tmp
+*.temp
+.cache/
+
+# ================================
+# Data & Backups
+# ================================
+# Your thesis text (keep private)
+data/raw/*.txt
+data/raw/*.pdf
+data/raw/*.docx
+
+# Backup directories
+output/json_backup*/
+*.backup
+*.bak
+
+# Temporary data processing
+.tmp/
+tmp/
+
+# ================================
+# Neo4j
+# ================================
+# Neo4j database files (if running locally)
+graph.db/
+neo4j/data/
+neo4j/logs/
+
+# ================================
+# OS Files
+# ================================
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.Spotlight-V100
+.Trashes
+
+# ================================
+# Include Important Files
+# ================================
+!.env.example
+!README.md
+!pyproject.toml
