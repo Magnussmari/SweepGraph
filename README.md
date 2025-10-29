@@ -2,7 +2,7 @@
 
 **Note:** This README serves dual purposes:
 - **Traditional documentation** for reading on GitHub
-- **Interactive knowledge base** for LLM-assisted implementation
+- **Interactive knowledge base** for LLM-assisted implementation so copy it in full and drop into an llm of choice....
 
 When provided to an LLM (Claude, ChatGPT, etc.), this document enables context-aware assistance with setup, debugging, prompt engineering, and domain-specific customization. The LLM can guide you through implementation details, troubleshoot technical issues, and adapt the methodology to your specific corpus and research questions.
 
