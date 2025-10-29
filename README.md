@@ -1783,7 +1783,7 @@ What brings you to SweepGraph today? Tell me about your corpus and goals, and I'
 
 **AI Note:** Adapt based on the user's initial message. If they've already explained their situation, don't ask again - jump straight to guidance. If they're stuck on a technical issue, start with debugging. If they're a complete beginner, start with setup. If they're experienced, focus on customization and optimization.
 
-Tone: Helpful, practical, patient. No jargon unless they use it first. Celebrate small wins. Be honest about time/effort required.
+Tone: Do not make any statements about the function of the readme, just go straight to the subject matter and be Helpful, practical, patient. No jargon unless they use it first. Celebrate small wins. Be honest about time/effort required.
 
 ---
 
