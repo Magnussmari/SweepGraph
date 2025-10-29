@@ -1,134 +1,116 @@
-# 📋 COPY THIS ENTIRE README INTO YOUR LLM OF CHOICE
+# SweepGraph Documentation
 
-**Yes, you read that right.** This README is designed to be both:
-- 📖 **Traditional documentation** (read it on GitHub)
-- 🤖 **An interactive AI guide** (paste it into Claude, ChatGPT, Perplexity, etc.)
+**Note:** This README serves dual purposes:
+- **Traditional documentation** for reading on GitHub
+- **Interactive knowledge base** for LLM-assisted implementation
 
-When you paste this README into an LLM, it becomes your personal guide through SweepGraph. The LLM can answer questions, help you debug issues, customize sweeps for your specific corpus, and guide you step-by-step through knowledge graph extraction.
+When provided to an LLM (Claude, ChatGPT, etc.), this document enables context-aware assistance with setup, debugging, prompt engineering, and domain-specific customization. The LLM can guide you through implementation details, troubleshoot technical issues, and adapt the methodology to your specific corpus and research questions.
 
-**Try it now:** Copy this entire page and paste it into your favorite LLM, then ask questions like:
-- "I have a 300-page thesis to analyze, where do I start?"
-- "How do I extract argument structures from my research paper?"
-- "My Neo4j connection isn't working, help me debug"
-- "What's the best sweep sequence for legal documents?"
-- "Walk me through creating my first custom sweep"
+### Example: LLM-Assisted Implementation
 
-### 💬 Example Interaction
+**Researcher Query:** "I need to analyze a PhD thesis on climate policy. I haven't used Neo4j before."
 
-**You:** *[Paste this README into Claude/ChatGPT]*
-"Hi! I have a PhD thesis on climate policy that I want to turn into a knowledge graph. I've never used Neo4j before."
+**LLM Response Pattern:**
+```
+Analysis of requirements:
+- Document type: Academic thesis (~200-400 pages)
+- Domain: Climate policy (concepts, arguments, evidence, citations)
+- Technical background: New to graph databases
 
-**LLM:** "Perfect! SweepGraph is designed for exactly this use case. Let me guide you through the setup and your first extraction.
+Recommended implementation path:
 
-**Your situation:**
-- PhD thesis (likely 200-400 pages with complex structure)
-- Climate policy domain (lots of concepts, arguments, evidence, citations)
-- New to Neo4j (we'll start with the Desktop version - easiest)
+Phase 1: Environment Setup (30-45 minutes)
+- Neo4j Desktop installation (recommended for development)
+- Python 3.11+ and dependency management
+- API configuration for LLM access
+- Repository setup and environment configuration
 
-**Here's your personalized plan:**
+Phase 2: Initial Extraction (1-2 hours)
+- Structure sweep: Document hierarchy
+- Import to Neo4j for validation
+- Basic Cypher queries for verification
 
-**Phase 1: Setup (30-45 minutes)**
-1. Install Neo4j Desktop (simplest for beginners)
-2. Install Python 3.11+ and uv package manager
-3. Get a Gemini API key (free tier works for testing)
-4. Clone the repo and configure .env
+Phase 3: Progressive Enrichment (iterative)
+- Domain concept extraction
+- Argument and claim identification
+- Evidence mapping
+- Citation network construction
+- Gap analysis
 
-**Phase 2: Your First Sweep (1-2 hours)**
-1. Extract thesis structure (chapters, sections)
-2. Import to Neo4j and visualize
-3. Run your first Cypher queries
+Required information:
+- Source format (.txt, .pdf, .docx)
+- Operating system
+- Analysis scope (full thesis or specific chapters)
+```
 
-**Phase 3: Progressive Extraction (iterative)**
-1. Sweep for climate policy concepts
-2. Extract key arguments and claims
-3. Map evidence to arguments
-4. Build citation network
-5. Discover gaps and connections
-
-**Before we start, a few questions:**
-- Do you have your thesis as a .txt, .pdf, or .docx file?
-- Are you on Mac, Windows, or Linux?
-- Do you want to analyze the entire thesis or just specific chapters?
-
-Let me know and I'll walk you through each step!"
-
-**That's the power of this approach** - the README becomes your expert guide.
+This demonstrates how the documentation enables context-aware technical assistance.
 
 ---
 
-## 🤖 Instructions for AI Assistants
+## Instructions for AI Assistants
 
-**If you are an AI assistant reading this**, you have been given the complete contents of the **SweepGraph** repository—a system for turning text corpora into Neo4j knowledge graphs through progressive, layered extraction sweeps.
+**Context:** This repository contains SweepGraph—a methodology for progressive knowledge graph extraction from text corpora using layered LLM sweeps and Neo4j.
 
-**Your Role:**
-- Guide users through SweepGraph based on their corpus type, goals, and technical experience
-- Help debug Neo4j connection issues, API errors, and JSON parsing problems
-- Assist with prompt engineering for optimal extraction quality
-- Explain Neo4j/Cypher concepts in accessible terms
-- Customize sweep sequences for different document types
-- Be conversational and helpful, not robotic or overly technical
+**Assistant Capabilities:**
+- Technical guidance for Neo4j setup, configuration, and troubleshooting
+- Prompt engineering for domain-specific extraction quality
+- Sweep sequence design based on corpus characteristics
+- Cypher query development and optimization
+- Python implementation assistance
+- Performance tuning and scalability recommendations
 
-**When a user pastes this, start by asking:**
-1. What type of document/corpus do they want to analyze?
-   - Academic thesis/dissertation
-   - Research papers
-   - Legal documents
-   - Technical documentation
-   - Books or long-form content
-   - Other
-2. Their experience level with:
-   - Neo4j and graph databases
-   - Python/scripting
-   - LLM prompt engineering
-3. Their specific goals:
-   - Understanding document structure
-   - Extracting arguments and evidence
-   - Building citation networks
-   - Finding gaps or inconsistencies
-   - Creating interactive visualizations
+**Initial Assessment Requirements:**
+1. Corpus characteristics:
+   - Document type and domain
+   - Volume and structure
+   - Research objectives
+2. Technical background:
+   - Graph database experience
+   - Programming proficiency
+   - LLM prompt engineering familiarity
+3. Implementation goals:
+   - Analysis scope
+   - Output requirements
+   - Timeline constraints
 
-**Then guide them to the appropriate path.**
+**User Scenarios and Technical Guidance:**
 
-**Common User Scenarios and How to Help:**
+**1. Academic Researchers (New to Graph Databases)**
+   - Neo4j Desktop setup for development environment
+   - Graph model fundamentals (nodes, relationships, properties)
+   - Initial structure sweep for validation
+   - Progressive sweep sequence design
+   - Query development for research questions
 
-1. **Complete Beginner (Never used Neo4j or graphs)**
-   - Start with Neo4j Desktop (easiest option)
-   - Walk through .env setup step-by-step
-   - Explain what a "node" and "relationship" are
-   - Use the structure sweep first (simplest, visual results)
-   - Show them the Streamlit UI for exploration
-   - Set realistic expectations: first sweep takes 1-2 hours
+**2. Research Teams (Data Analysis Focus)**
+   - Research question mapping to graph patterns
+   - Domain-specific sweep sequencing:
+     - Thesis analysis: Structure → Concepts → Claims → Evidence → Citations
+     - Paper processing: Concepts → Methods → Results → Citations
+     - Legal analysis: Structure → Definitions → Precedents → Arguments
+   - Terminology extraction and standardization
+   - Cross-document relationship identification
 
-2. **Research/Academic User (Has data, unclear on graphs)**
-   - Focus on their research questions
-   - Map research questions to sweep sequences
-   - Explain how graphs reveal hidden connections
-   - Recommend sweep order for their domain:
-     - Thesis: Structure → Concepts → Claims → Evidence → Citations
-     - Papers: Concepts → Methods → Results → Citations
-     - Legal: Structure → Definitions → Precedents → Arguments
-   - Help with prompt engineering for their specific terminology
+**3. Technical Professionals (Database Background)**
+   - Graph vs. relational model comparison
+   - Cypher query optimization
+   - Sweep template architecture
+   - Advanced features: merge operations, export utilities, schema validation
+   - Performance tuning and indexing strategies
 
-3. **Technical User (Knows Python/databases, new to graphs)**
-   - Brief overview of graph thinking vs. relational
-   - Point to Cypher query examples
-   - Explain sweep template architecture
-   - They can move fast - focus on customization
-   - Show advanced features (merge, export, validation)
+**4. Technical Issue Resolution**
+   - **Connection failures**: Docker service status, credential verification, network configuration
+   - **API errors**: Authentication, rate limiting, timeout configuration
+   - **JSON parsing**: Output validation, schema compliance, error recovery
+   - **Empty extraction**: Corpus loading verification, prompt refinement, example inclusion
+   - **Performance degradation**: Index creation, constraint definition, query optimization
 
-4. **Stuck on Technical Issues**
-   - **Neo4j won't connect**: Check Docker status, verify .env credentials, test port 7687
-   - **Gemini API errors**: Verify API key, check rate limits, test with curl
-   - **JSON parsing fails**: Review logs, show example of valid JSON, improve prompt specificity
-   - **Empty results**: Check corpus loading, verify prompt clarity, add examples to prompt
-   - **Slow performance**: Explain Neo4j indexes, recommend constraints, optimize queries
-
-5. **Domain-Specific Adaptations**
-   - **Legal documents**: Extract precedents, statutes, arguments, judicial reasoning
-   - **Scientific papers**: Methods, results, hypotheses, experimental design
-   - **Technical docs**: APIs, dependencies, configurations, workflows
-   - **Books/literature**: Characters, themes, plot structure, narrative arcs
-   - **Business docs**: Processes, stakeholders, requirements, risks
+**5. Domain Specializations**
+   - **Legal corpus**: Precedent extraction, statutory analysis, reasoning chains
+   - **Scientific literature**: Methodology extraction, result mapping, hypothesis tracking
+   - **Technical documentation**: API discovery, dependency mapping, configuration management
+   - **Literary analysis**: Character networks, thematic structures, narrative patterns
+   - **Business process**: Stakeholder mapping, requirement tracking, risk identification
 
 **Key Files You Can Reference:**
 - `.env.example` - Configuration template
@@ -137,90 +119,92 @@ Let me know and I'll walk you through each step!"
 - `scripts/import_to_neo4j.py` - Import utility
 - `frontend/app.py` - Streamlit UI entry point
 
-**Your Tone:**
-- Practical and clear, not academic
-- Patient with beginners
-- Honest about time/effort required
-- Enthusiastic about graph insights
-- Debugging-focused when users are stuck
+**Communication Guidelines:**
+- Provide clear, technically accurate guidance
+- Assess user background before recommending approaches
+- Estimate realistic time requirements
+- Focus on methodological rigor and validation
+- Prioritize troubleshooting and error resolution
 
-**Remember:**
-- Always ask clarifying questions first
-- Don't assume technical knowledge
-- Use analogies for graph concepts
-- Provide concrete examples from their domain
-- Offer to walk through code step-by-step
-- Celebrate small wins ("Great! Your first nodes are in Neo4j!")
+**Best Practices:**
+- Gather requirements before suggesting solutions
+- Adapt technical depth to user background
+- Use concrete examples from relevant domains
+- Provide step-by-step implementation guidance when appropriate
+- Emphasize validation and quality assurance throughout the process
 
 ---
 
-# 🕸️ SweepGraph: Progressive Knowledge Graph Extraction
+# SweepGraph: Progressive Knowledge Graph Extraction
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](#)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![Neo4j](https://img.shields.io/badge/neo4j-5.0+-008CC1.svg)](https://neo4j.com/)
 
-**Transform any text corpus into an interactive, queryable knowledge graph** 🚀
+**A methodology for transforming text corpora into structured, queryable knowledge graphs**
 
-Turn hundreds of pages of dense text into a structured Neo4j graph that reveals hidden connections, identifies gaps, and makes your content interactive and explorable.
-
----
-
-## 📖 What Is SweepGraph?
-
-**SweepGraph is a methodology and scaffolding for progressive knowledge extraction.**
-
-Instead of trying to extract everything at once (and failing), SweepGraph uses **layered "sweeps"**—each sweep focuses on extracting one specific type of information:
-
-1. **Sweep 1:** Extract document structure (chapters, sections)
-2. **Sweep 2:** Identify key concepts and terminology
-3. **Sweep 3:** Extract claims and arguments
-4. **Sweep 4:** Map supporting evidence
-5. **Sweep 5:** Build citation networks
-6. **Sweep 6:** Connect concepts to claims
-7. **Sweep 7+:** Analytical sweeps (find gaps, trace reasoning chains)
-
-**Each sweep builds on previous ones**, progressively enriching your knowledge graph.
-
-**Why this works:**
-- ✅ Focused prompts get better LLM results
-- ✅ Iterative process catches what early sweeps miss
-- ✅ You validate and refine incrementally
-- ✅ Works with any text corpus (thesis, papers, books, docs)
-- ✅ Uses any LLM (Gemini, Claude, GPT, local models)
+SweepGraph enables systematic extraction and representation of complex documents as Neo4j graphs, facilitating analysis of relationships, identification of patterns, and discovery of structural gaps in large text corpora.
 
 ---
 
-## 🎯 What Can You Build?
+## Overview
+
+**SweepGraph is a methodology and framework for progressive knowledge extraction from text corpora.**
+
+The system employs iterative extraction passes ("sweeps"), each targeting specific information types. This layered approach addresses the limitations of monolithic extraction attempts by decomposing complex analysis into focused, manageable tasks:
+
+1. **Structure Extraction:** Document hierarchy (chapters, sections, subsections)
+2. **Concept Identification:** Key terminology, definitions, theoretical frameworks
+3. **Claim Extraction:** Arguments, hypotheses, assertions
+4. **Evidence Mapping:** Supporting data, citations, empirical support
+5. **Citation Network:** Reference relationships and scholarly context
+6. **Relationship Synthesis:** Cross-cutting connections between extracted entities
+7. **Analytical Sweeps:** Gap identification, reasoning chain analysis, quality validation
+
+Each sweep builds upon the graph structure established by previous passes, enabling progressive enrichment of the knowledge representation.
+
+**Methodological Advantages:**
+- Focused extraction tasks improve LLM output quality and consistency
+- Iterative refinement captures information missed in initial passes
+- Incremental validation enables early error detection and correction
+- LLM-agnostic architecture supports multiple providers (Gemini, Claude, GPT-4, local models)
+- Domain-adaptable framework applies to diverse text types
+
+---
+
+## Application Domains
 
 **Academic Research:**
-- Turn your PhD thesis into an interactive graph
-- Extract argument structures from papers
-- Build citation networks automatically
-- Find gaps in literature reviews
-- Trace evidence chains
+- Dissertation and thesis structural analysis
+- Argument extraction and validation
+- Automated citation network construction
+- Literature review gap identification
+- Evidence chain mapping and verification
 
-**Legal Analysis:**
-- Extract case law precedents
-- Map statutory relationships
-- Identify conflicting interpretations
-- Build argument dependency graphs
+**Legal Corpus Analysis:**
+- Case law precedent extraction and relationship mapping
+- Statutory framework analysis
+- Judicial reasoning pattern identification
+- Interpretive conflict detection
+- Argument dependency graph construction
 
 **Technical Documentation:**
-- Extract API relationships
-- Map system dependencies
-- Document configuration flows
-- Create interactive tech docs
+- API relationship discovery and mapping
+- System architecture dependency analysis
+- Configuration parameter tracking
+- Workflow and process documentation
+- Cross-system integration mapping
 
-**Books & Literature:**
-- Character relationship maps
-- Theme and motif networks
-- Plot structure analysis
-- Narrative arc visualization
+**Literary and Textual Analysis:**
+- Character relationship networks
+- Thematic structure mapping
+- Narrative pattern identification
+- Discourse analysis
+- Intertextual connection discovery
 
-**Any Structured Text:**
-- If it has concepts, relationships, or structure, SweepGraph can extract it
+**Applicability:**
+The methodology applies to any structured text corpus containing identifiable entities (concepts, agents, events) and relationships. Domain-specific sweep sequences can be designed for specialized analysis requirements.
 
 ---
 
@@ -820,7 +804,43 @@ RETURN id, size(nodes) as duplicates
 
 ---
 
-## 🎓 Advanced Techniques
+## Advanced Techniques
+
+### Model Context Protocol (MCP) Integration
+
+For LLM-assisted graph queries and analysis, SweepGraph can integrate with the [neo4j-contrib/mcp-neo4j](https://github.com/neo4j-contrib/mcp-neo4j) server.
+
+**Dual-Database Architecture:**
+
+Create a distilled "core" database optimized for MCP:
+
+```bash
+# Generate core database from full graph
+python scripts/create_core_database.py \
+  --input output/neo4j_ready/merged_full.json \
+  --output output/neo4j_ready/core.json \
+  --strategy abstract  # Options: abstract, prune, aggregate
+```
+
+**Core Database Benefits:**
+- 90%+ size reduction while preserving analytical capability
+- Optimized for real-time LLM queries via MCP
+- Enhanced visualization performance
+- Focused on essential concepts and relationships
+
+**Use Cases:**
+- Natural language queries via Claude Desktop or other MCP clients
+- Rapid graph exploration during research
+- Interactive knowledge discovery sessions
+- LLM-augmented analysis workflows
+
+**Full Database Retention:**
+- Comprehensive Cypher queries
+- Detailed relationship analysis
+- Validation and verification
+- Historical reference
+
+This approach enables both rapid, abstracted access (MCP) and comprehensive analysis (direct queries).
 
 ### Merge Multiple Sweeps
 
@@ -1083,9 +1103,40 @@ Switch LLMs by changing one line in your sweep script.
 
 ---
 
-## 🌍 Real-World Use Cases
+## Real-World Implementation
 
-### Case Study 1: PhD Thesis Analysis
+### Case Study 1: Master's Thesis Analysis (Production Implementation)
+
+**Author Implementation:** Magnus Smari Smarason
+
+**Corpus Characteristics:** Master's thesis with complex conceptual structure
+
+**Technical Architecture:**
+- **Total Sweeps:** 40 specialized extraction passes
+- **Dual-Database Strategy:**
+
+  | Database | Nodes | Relationships | Size | Reduction | Purpose |
+  |----------|-------|---------------|------|-----------|---------|
+  | Core | 90 | 48 | 44 KB | 92.7% | MCP server, visualizations |
+  | Full | 1,227 | 1,545 | 826 KB | Baseline | Traditional querying, comprehensive analysis |
+
+**Integration:** [neo4j-contrib/mcp-neo4j](https://github.com/neo4j-contrib/mcp-neo4j)
+
+The core database represents a distilled, high-level abstraction optimized for:
+- Model Context Protocol (MCP) server integration for LLM-assisted queries
+- Real-time visualization performance
+- Essential concept and relationship representation
+- 92.7% size reduction while maintaining analytical utility
+
+The full database preserves comprehensive extraction for:
+- Detailed Cypher query analysis
+- Complete relationship tracking
+- Validation and quality assurance
+- Archive and reference purposes
+
+**Architectural Insight:** The dual-database approach enables both rapid, abstracted access (via MCP) and comprehensive, detailed analysis (via direct Neo4j queries), demonstrating the methodology's scalability and flexibility.
+
+### Case Study 2: PhD Thesis Analysis
 
 **Domain:** Climate policy research (350 pages)
 
@@ -1109,7 +1160,7 @@ Switch LLMs by changing one line in your sweep script.
 
 **Time Investment:** ~10 hours initial + 5 hours refinement
 
-### Case Study 2: Legal Document Analysis
+### Case Study 3: Legal Document Analysis
 
 **Domain:** Environmental law case precedents (500+ cases)
 
@@ -1130,7 +1181,7 @@ Switch LLMs by changing one line in your sweep script.
 
 **Time Investment:** ~20 hours for 500 cases
 
-### Case Study 3: Technical Documentation
+### Case Study 4: Technical Documentation
 
 **Domain:** Microservices architecture (120 docs)
 
@@ -1460,68 +1511,70 @@ GitHub repository: https://github.com/Magnussmari/SweepGraph
 
 ---
 
-## 💭 Real Talk: What to Expect
+## Implementation Expectations
 
-### This System WILL:
-✅ Turn dense text into structured, queryable graphs
-✅ Reveal hidden connections and patterns
-✅ Scale to large corpora (hundreds of pages)
-✅ Work with any LLM (Gemini, Claude, GPT, local)
-✅ Provide a systematic, repeatable methodology
-✅ Save significant time vs. manual analysis
+### System Capabilities:
+- Systematic transformation of text corpora into structured graph representations
+- Pattern and relationship discovery across large document collections
+- Scalable processing (100s-1000s of pages)
+- LLM-agnostic architecture (Gemini, Claude, GPT-4, Ollama, etc.)
+- Reproducible extraction methodology
+- Significant efficiency gains compared to manual structural analysis
 
-### This System WON'T:
-❌ Extract perfectly on the first try (iteration is required)
-❌ Replace deep reading and understanding
-❌ Work magically without prompt refinement
-❌ Be faster than skimming (but way more thorough)
-❌ Eliminate the need for domain expertise
+### System Limitations:
+- Iterative refinement required for optimal extraction quality
+- Complements, but does not replace, close reading and domain analysis
+- Prompt engineering necessary for domain-specific terminology
+- Extraction thoroughness prioritized over raw processing speed
+- Requires domain expertise for validation and quality assurance
 
-### You'll Need:
-- **Time:** 10-20 hours for a typical thesis analysis
-- **Patience:** Prompts require testing and refinement
-- **Validation:** Spot-check accuracy, don't trust blindly
-- **Iteration:** Sweeps improve through multiple passes
-- **Domain Knowledge:** To write effective prompts and validate results
+### Resource Requirements:
+- **Time Investment:** 10-20 hours for comprehensive thesis analysis (350-page corpus)
+- **Technical Skill:** Python proficiency, basic graph database concepts
+- **Validation:** Systematic accuracy verification essential
+- **Iteration:** Multiple sweep passes typically necessary for production quality
+- **Domain Knowledge:** Required for effective prompt design and result validation
 
-### You'll Gain:
-- Structured knowledge graphs from unstructured text
-- Query-based exploration of complex content
-- Pattern recognition at scale
-- Reusable extraction methodology
-- Interactive knowledge bases
+### Outcomes:
+- Structured, queryable knowledge graphs derived from unstructured text
+- Graph-based query capabilities for complex analytical questions
+- Pattern recognition across large document collections
+- Reusable, documented extraction workflows
+- Foundation for further computational analysis
 
-**The real value:** Not speed, but **thoroughness and discoverability**.
+**Primary Value Proposition:** Enhanced analytical thoroughness and systematic relationship discovery, rather than processing speed alone.
 
 ---
 
-## 🎼 The Philosophy: Why Sweeps Work
+## Methodological Rationale
 
-**The Problem with "Extract Everything":**
-- LLMs lose focus on vague, broad tasks
-- Context windows can't hold 300+ pages
-- Quality degrades with task complexity
-- Hard to validate massive outputs
+**Challenges of Monolithic Extraction:**
+- LLM attention degradation on complex, multi-faceted tasks
+- Context window limitations for large documents (300+ pages)
+- Quality deterioration as task scope increases
+- Difficult validation of comprehensive outputs
+- Poor error attribution and correction
 
-**The Sweep Solution:**
-- **One clear job per sweep** → Better focus
-- **Incremental extraction** → Manageable chunks
-- **Layered context** → Later sweeps build on earlier structure
-- **Validation per sweep** → Catch issues early
-- **Flexible iteration** → Rerun or skip sweeps as needed
+**Sweep-Based Solution:**
+- **Task Decomposition:** Single, well-defined extraction objective per sweep
+- **Incremental Processing:** Manageable data volumes per operation
+- **Contextual Layering:** Later sweeps leverage previously extracted structure
+- **Granular Validation:** Error detection and correction at each stage
+- **Flexible Iteration:** Selective re-execution of specific sweeps
 
-**Analogy:**
-Traditional: "Build me a house" (vague, overwhelming)
-Sweeps: Foundation → Frame → Walls → Roof → Finishing (systematic)
+**Architectural Analogy:**
+Monolithic approach: Construct entire building simultaneously (coordination failure, quality issues)
+Sweep methodology: Foundation → Structural frame → Enclosure → Systems → Finishing (systematic, inspectable)
 
-**Think like an archaeologist:**
-- Layer 1: Survey the site (structure)
-- Layer 2: Excavate carefully (concepts)
-- Layer 3: Document artifacts (claims)
-- Layer 4: Analyze context (evidence)
-- Layer 5: Piece together meaning (relationships)
+**Archaeological Parallel:**
+The methodology mirrors stratigraphic excavation:
+- Layer 1: Site survey and structural mapping
+- Layer 2: Systematic excavation of defined zones
+- Layer 3: Artifact documentation and cataloging
+- Layer 4: Contextual analysis of findings
+- Layer 5: Synthesis and interpretation
 
-**Progressive enrichment**, not one-shot extraction.
+**Core Principle:** Progressive enrichment through focused, sequential extraction passes rather than comprehensive single-pass attempts.
 
 ---
 
