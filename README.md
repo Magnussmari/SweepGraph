@@ -137,10 +137,10 @@ This demonstrates how the documentation enables context-aware technical assistan
 
 # SweepGraph: Progressive Knowledge Graph Extraction
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](#)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![Neo4j](https://img.shields.io/badge/neo4j-5.0+-008CC1.svg)](https://neo4j.com/)
+[![Neo4j](https://img.shields.io/badge/neo4j-5.0+-green.svg)](https://neo4j.com/)
 
 **A methodology for transforming text corpora into structured, queryable knowledge graphs**
 
@@ -205,6 +205,18 @@ Each sweep builds upon the graph structure established by previous passes, enabl
 
 **Applicability:**
 The methodology applies to any structured text corpus containing identifiable entities (concepts, agents, events) and relationships. Domain-specific sweep sequences can be designed for specialized analysis requirements.
+
+---
+
+## ⚡ Quick Demo (5 Minutes)
+
+Want to see it work right away? Run the quickstart helper to load a sample corpus, generate the structure sweep JSON, and push it into Neo4j (if your credentials are configured):
+
+```bash
+uv run python scripts/utilities/quickstart_demo.py
+```
+
+The command confirms `data/raw/sample_corpus.txt`, writes `output/neo4j_ready/sample_sweep01_structure.json`, and attempts the import. Add `--skip-import` to create the files without touching Neo4j.
 
 ---
 
@@ -341,6 +353,18 @@ Sweep 6 → Connect concepts to claims
 Sweep 7 → Analytical queries (find gaps, chains)
           ↓
    Rich, validated knowledge graph
+```
+
+```mermaid
+flowchart LR
+   A[Corpus] --> B[Sweep 1<br/>Structure]
+   B --> C[Sweep 2<br/>Concepts]
+   C --> D[Sweep 3<br/>Claims]
+   D --> E[Sweep 4<br/>Evidence]
+   E --> F[Sweep 5<br/>Citations]
+   F --> G[Sweep 6<br/>Synthesis]
+   G --> H[Neo4j Graph]
+   H --> I[Analysis & Queries]
 ```
 
 **Why layered sweeps work:**
@@ -958,10 +982,12 @@ SweepGraph/
 │   ├── validate_ontology.py         # Schema validation
 │   ├── templates/
 │   │   └── sweep_template.py        # Template for new sweeps
-│   └── utils/
-│       ├── __init__.py
-│       ├── llm_client.py            # LLM abstraction layer
-│       └── json_validator.py        # JSON validation utils
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   ├── llm_client.py            # LLM abstraction layer
+│   │   └── json_validator.py        # JSON validation utils
+│   └── utilities/
+│       └── quickstart_demo.py       # Five-minute demo helper
 │
 ├── prompts/v5/
 │   ├── 01_structure_extraction.txt   # Structure sweep prompt
@@ -985,6 +1011,7 @@ SweepGraph/
 │
 ├── data/
 │   ├── raw/                          # Your source documents
+│   │   ├── sample_corpus.txt         # Demo corpus used by quickstart
 │   │   ├── corpus.txt
 │   │   ├── thesis.pdf
 │   │   └── ...
@@ -1384,6 +1411,8 @@ git commit -m "Sweep 05 - Evidence extraction"
 
 **We welcome contributions!**
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines, review checklists, and community expectations.
+
 **Ways to contribute:**
 
 - 🐛 **Bug Reports** - Found an issue? Open a GitHub issue
@@ -1414,7 +1443,7 @@ git commit -m "Sweep 05 - Evidence extraction"
 
 ## 📜 License & Attribution
 
-**License:** MIT - Use freely, modify extensively, share generously
+**License:** MIT - Use freely, modify extensively, share generously. Full text lives in [LICENSE](LICENSE).
 
 **Created by:** Magnus Smari Smarason
 **Website:** [www.smarason.is](https://www.smarason.is)

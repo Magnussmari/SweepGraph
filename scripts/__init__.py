@@ -1,0 +1,1 @@
+"""SweepGraph script package namespace."""
